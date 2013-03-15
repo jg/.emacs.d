@@ -1,3 +1,6 @@
 [submodule "vendor/evil"]
 	path = vendor/evil
 	url = git://gitorious.org/evil/evil.git
+[submodule "vendor/scala-mode"]
+	path = vendor/scala-mode
+	url = git://github.com/haxney/scala-mode.git
