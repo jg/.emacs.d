@@ -18,7 +18,7 @@
 (load-conf "find-file-in-project")
 (load-conf "scala-mode")
 (load-conf "evil")
-; (load-conf "undo-tree")
+(load-conf "undo-tree")
 
 ; kbd shortcuts
 (load-conf "keybindings")
