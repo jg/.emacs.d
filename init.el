@@ -6,19 +6,25 @@
 	(load-file (expand-file-name (concat "~/.emacs.d/" filename ".el")))
 	(add-to-list '*loaded-files* filename))))
 
-; config
-(setq scroll-step 1)
-(setq auto-window-vscroll nil)
-(tool-bar-mode -1)
-(setq backup-directory-alist `(("." . "~/.saves")))
-(setq undo-limit 3600)
-
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(load-conf "find-file-in-project")
-(load-conf "scala-mode")
-(load-conf "evil")
-(load-conf "undo-tree")
+(load-conf "settings")
+(load-conf "packages")
 
-; kbd shortcuts
+(load-conf "evil")
+
+; language modes
+(load-conf "ruby-mode")
+(load-conf "ruby-electric")
+(load-conf "ruby-end")
+(load-conf "markdown-mode")
+
+; editing
+(load-conf "move-text")
 (load-conf "keybindings")
+(load-conf "org-mode")
+
+; other
+(load-conf "yasnippet")
+(load-conf "deft")
+(load-conf "ido")
