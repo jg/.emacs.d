@@ -20,3 +20,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+; clean outline view
+(org-indent-mode)
+(setq org-hide-leading-stars t)
+
+; (org-use-sub-supescripts t)
