@@ -1,1 +1,1 @@
-(load-theme 'zenburn t)
+(load-theme 'solarized-light t)

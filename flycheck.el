@@ -1,0 +1,2 @@
+(require 'flycheck)
+(flycheck-mode)
