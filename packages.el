@@ -62,6 +62,9 @@
                                'git-commit-mode
                                'gitconfig-mode
                                'haml-mode
+			       
+                               ; other
+                               'tree-mode
                                ))
 
 (dolist (package required-packages)

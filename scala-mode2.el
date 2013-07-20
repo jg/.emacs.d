@@ -1,6 +1,7 @@
 (require 'scala-mode2)
 (add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))
 (add-to-list 'auto-mode-alist '("\\.sbt$" . scala-mode))
+(add-to-list 'auto-mode-alist '("\\.conf$" . scala-mode))
 
 (add-hook 'scala-mode-hook '(lambda ()
 
@@ -18,7 +19,7 @@
   ;; comments.
   (local-set-key (kbd "RET") '(lambda ()
     (interactive)
-    (newline-and-indent)
+    (reindent-then-newline-and-indent)
     (scala-indent:insert-asterisk-on-multiline-comment)))
 
   ;; Bind the 'join-line' command to C-M-j. This command is normally

@@ -1,3 +1,3 @@
 (require 'ruby-end)
 (setq ruby-end-insert-newline nil)
-(ruby-end-mode)
+(add-hook 'ruby-mode-hook (lambda () (ruby-end-mode)))

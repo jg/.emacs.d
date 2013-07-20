@@ -1,3 +1,9 @@
+; nonblinking cursor
+(blink-cursor-mode 0)
+
+; font size
+(set-face-attribute 'default nil :height 120)
+
 ; config
 (setq scroll-step 1)
 (setq auto-window-vscroll nil)
