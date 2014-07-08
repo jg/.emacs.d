@@ -1,8 +1,35 @@
+; don't compile scss files
+(setq scss-compile-at-save nil)
+
+; indent with spaces
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+; (setq indent-line-function 'insert-tab)
+
+; copy to system clipboard
+(setq x-select-enable-clipboard t)
+
+; don't create those backup files all over the place!
+(setq make-backup-files nil)
+(setq backup-directory-alist `(("~/.emacs.d/saves")))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
+
+
+; show trailing whitespace
+(setq show-trailing-whitespace t)
+
+; automatically follow symlinks
+(setq vc-follow-symlinks t)
+
 ; nonblinking cursor
 (blink-cursor-mode 0)
 
 ; font size
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 100)
 
 ; config
 (setq scroll-step 1)

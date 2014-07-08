@@ -1,0 +1,6 @@
+# Author: Jonas Bonèr <jonas@jonasboner.com>
+# name: var name = ..
+# key: va
+# --
+var ${1:name} = ${3:obj}
+$0

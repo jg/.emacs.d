@@ -1,0 +1,5 @@
+# Author: Juliusz Gonera <juliusz.gonera@gmail.com>
+# name: override def f =
+# key: ov
+# --
+override def ${1:name} = $0

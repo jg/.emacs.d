@@ -10,6 +10,6 @@
       (switch-to-buffer source-buffer)
       (pop-to-buffer other-buffer))))
 
-(eval-after-load 'ruby-mode
-  '(progn
-     (define-key ruby-mode-map (kbd "C-c s") 'ruby-open-spec-other-buffer)))
+;; (eval-after-load 'ruby-mode
+;;   '(progn
+;;      (define-key ruby-mode-map (kbd "C-c s") 'ruby-open-spec-other-buffer)))

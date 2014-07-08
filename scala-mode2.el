@@ -1,10 +1,13 @@
 (require 'scala-mode2)
+
+; align params on the next lines to the first one
+(setq scala-indent:align-parameters t)
+
 (add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))
 (add-to-list 'auto-mode-alist '("\\.sbt$" . scala-mode))
 (add-to-list 'auto-mode-alist '("\\.conf$" . scala-mode))
 
 (add-hook 'scala-mode-hook '(lambda ()
-
   ;; Bind the 'newline-and-indent' command to RET (aka 'enter'). This
   ;; is normally also available as C-j. The 'newline-and-indent'
   ;; command has the following functionality: 1) it removes trailing
@@ -34,6 +37,9 @@
   ;; when using the 'eager' mode by default and you want to "outdent" a
   ;; code line as a new statement.
   (local-set-key (kbd "<backtab>") 'scala-indent:indent-with-reluctant-strategy)
-
   ;; and other bindings here
+
+  (highlight-80+-mode)
 ))
+
+;; ; (add-hook 'scala-mode-hook '(lambda ()))

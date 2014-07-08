@@ -1,12 +1,6 @@
-; (load-theme 'tango t)
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-vim-colors)
-; (color-theme-emacs-21)
-; (load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-; (color-theme-vim-colors)
-
-; (color-theme-vim-colors)
 
 (setq evil-default-cursor t)
 

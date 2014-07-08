@@ -1,0 +1,5 @@
+# Author: Jonas Bonèr <jonas@jonasboner.com>
+# name: def f = ...
+# key: defi
+# --
+def ${1:name}: ${2:type} = $0

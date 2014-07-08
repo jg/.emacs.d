@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sa seeds
+# key: sa
+# binding: direct-keybinding
+# expand-env: ((some-var some-value))
+# type: command
+# --
+Source.find_or_create_by_type('$0', {:identifier => '$0', :name => "$1", :media_type => 'Daily', :country => 'CH', :state => 'active'}, :without_protection => true)

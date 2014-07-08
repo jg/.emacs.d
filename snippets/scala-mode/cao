@@ -1,0 +1,5 @@
+# Author: Jonas Bonèr <jonas@jonasboner.com>
+# name: protected
+# key: cao
+# --
+context.actorOf(Props($1), $2) $0

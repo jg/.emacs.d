@@ -1,0 +1,6 @@
+# Author: Jonas Bonèr <jonas@jonasboner.com>
+# name: val name = ..
+# key: v
+# --
+val ${1:name} = ${2:obj}
+$0

@@ -1,0 +1,7 @@
+# Author: Jonas Bonèr <jonas@jonasboner.com>
+# name: def f = ...
+# key: defs
+# --
+def ${1:name}: ${2:type} = {
+  $0
+}

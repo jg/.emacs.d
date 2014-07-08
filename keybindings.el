@@ -1,5 +1,10 @@
 ; unset unused global keys
+
 (global-unset-key (kbd "C-\\"))
+
+; reset some evil bindings i don't like
+; (global-unset-key (kbd "("))
+; (global-unset-key (kbd ")"))
 
 (defvar my-keys-minor-mode-map (make-keymap) "my keys minor mode keymap")
 
@@ -9,10 +14,10 @@
 
 
 ; reload config
-(defun reload-config () 
+(defun reload-config ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
-(define-key my-keys-minor-mode-map (kbd "C-c c") 'reload-config)
+;(define-key my-keys-minor-mode-map (kbd "C-c c") 'reload-config)
 
 ; moving window
 (define-key my-keys-minor-mode-map (kbd "C-x <up>") 'windmove-up)
@@ -21,23 +26,38 @@
 (define-key my-keys-minor-mode-map (kbd "C-x <left>") 'windmove-left)
 
 ; editing
-; (define-key my-keys-minor-mode-map (kbd "C-u") 'backward-kill-line)
+(define-key my-keys-minor-mode-map (kbd "C-u") 'evil-scroll-page-up)
+(define-key my-keys-minor-mode-map (kbd "C-d") 'evil-scroll-page-down)
 (define-key my-keys-minor-mode-map (kbd "C-k") 'kill-whole-line)
 
 (define-key my-keys-minor-mode-map (kbd "C-k") 'kill-whole-line)
 (define-key my-keys-minor-mode-map (kbd "C-\\") 'comment-or-uncomment-region)
 
 ; extensions
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'find-file-in-project)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'fiplr-find-file)
+(define-key my-keys-minor-mode-map (kbd "C-p") 'fiplr-find-file)
 
 (define-key my-keys-minor-mode-map (kbd "C-l") 'deft)
 
 (define-key my-keys-minor-mode-map (kbd "C-c o") 'dirtree)
 
-(define-key my-keys-minor-mode-map (kbd "C-y") 'speedbar)
+(define-key my-keys-minor-mode-map (kbd "C-v") 'paste-from-clipboard)
 
+; (define-key my-keys-minor-mode-map (kbd "C-y") 'speedbar)
+
+(define-key my-keys-minor-mode-map (kbd "C-c s") 'copy-file-name-to-clipboard)
+
+; org-mode
+
+(define-key my-keys-minor-mode-map (kbd "C-c a t") 'org-todo-list)
+
+(define-key my-keys-minor-mode-map (kbd "C-c a")   'org-agenda)
+
+(define-key my-keys-minor-mode-map (kbd "C-c c") 'org-capture)
 
 (my-keys-minor-mode 1)
+
+
 
 (defun my-minibuffer-setup-hook ()
   (my-keys-minor-mode 0))
@@ -76,3 +96,17 @@
           (rename-buffer new-name)
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
+
+
+(defun copy-file-name-to-clipboard ()
+  "Put the current file name on the clipboard"
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (with-temp-buffer
+        (insert filename)
+        (clipboard-kill-region (point-min) (point-max)))
+      (message filename))))
+
