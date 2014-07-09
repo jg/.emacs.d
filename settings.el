@@ -29,7 +29,7 @@
 (blink-cursor-mode 0)
 
 ; font size
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 110)
 
 ; config
 (setq scroll-step 1)
