@@ -6,3 +6,4 @@ vendor/
 /#init.el#
 bookmarks
 menu_log.notes
+.emacs.desktop
