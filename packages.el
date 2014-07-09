@@ -71,6 +71,7 @@
                                ; other
                                'tree-mode
                                'projectile
+                               'bookmark+
                                ))
 
 (dolist (package required-packages)

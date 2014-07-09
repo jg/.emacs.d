@@ -17,7 +17,11 @@
 (defun reload-config ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
-;(define-key my-keys-minor-mode-map (kbd "C-c c") 'reload-config)
+(define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
+
+; desktop save/restore
+(define-key my-keys-minor-mode-map (kbd "C-x c") 'bmkp-set-desktop-bookmark)
+(define-key my-keys-minor-mode-map (kbd "C-x j") 'bmkp-desktop-jump)
 
 ; moving window
 (define-key my-keys-minor-mode-map (kbd "C-x <up>") 'windmove-up)
@@ -58,6 +62,12 @@
 (my-keys-minor-mode 1)
 
 
+; buffer mgmt
+
+(define-key my-keys-minor-mode-map (kbd "C-x l") 'only-current-buffer)
+
+
+; definitions
 
 (defun my-minibuffer-setup-hook ()
   (my-keys-minor-mode 0))
@@ -110,3 +120,7 @@
         (clipboard-kill-region (point-min) (point-max)))
       (message filename))))
 
+(defun only-current-buffer ()
+  "Kill all buffers except the current one"
+  (interactive)
+    (mapc 'kill-buffer (cdr (buffer-list (current-buffer)))))

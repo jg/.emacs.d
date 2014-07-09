@@ -54,6 +54,7 @@
 (load-conf "dirtree")
 (load-conf "ensime")
 (load-conf "fiplr")
+(load-conf "bookmark+")
 
 (load-conf "keybindings")
 
@@ -77,6 +78,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(org-agenda-files (quote ("~/documents/notes/todo.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
