@@ -56,10 +56,9 @@
 (load-conf "fiplr")
 (load-conf "bookmark+")
 (load-conf "magit")
-
 (load-conf "keybindings")
-
 (load-conf "projectile")
+(load-conf "ibuffer")
 
 (defun org-mode-reftex-setup ()
   (load-library "reftex")

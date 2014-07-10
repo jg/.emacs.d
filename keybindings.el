@@ -27,6 +27,11 @@
   (load-file "~/.emacs.d/init.el"))
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
 
+; buffer menu
+
+; (define-key my-keys-minor-mode-map (kbd "C-x C-b") 'buffer-menu)
+(define-key my-keys-minor-mode-map (kbd "C-x C-b") 'ibuffer)
+
 ; desktop save/restore
 (define-key my-keys-minor-mode-map (kbd "C-x c") 'bmkp-set-desktop-bookmark)
 (define-key my-keys-minor-mode-map (kbd "C-x j") 'bmkp-desktop-jump)
