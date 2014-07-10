@@ -1,3 +1,7 @@
+; magit-status
+
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'magit-status)
+
 ; buffer menu
 
 (define-key my-keys-minor-mode-map (kbd "C-x C-b") 'buffer-menu)
