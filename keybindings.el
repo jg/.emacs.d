@@ -1,3 +1,7 @@
+; buffer menu
+
+(define-key my-keys-minor-mode-map (kbd "C-x C-b") 'buffer-menu)
+
 ; unset unused global keys
 
 (global-unset-key (kbd "C-\\"))
