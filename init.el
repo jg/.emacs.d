@@ -55,6 +55,7 @@
 (load-conf "ensime")
 (load-conf "fiplr")
 (load-conf "bookmark+")
+(load-conf "magit")
 
 (load-conf "keybindings")
 
