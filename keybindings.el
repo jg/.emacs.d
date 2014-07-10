@@ -1,11 +1,3 @@
-; magit-status
-
-(define-key my-keys-minor-mode-map (kbd "C-c g") 'magit-status)
-
-; buffer menu
-
-(define-key my-keys-minor-mode-map (kbd "C-x C-b") 'buffer-menu)
-
 ; unset unused global keys
 
 (global-unset-key (kbd "C-\\"))
@@ -26,6 +18,10 @@
   (interactive)
   (load-file "~/.emacs.d/init.el"))
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
+
+; magit-status
+
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'magit-status)
 
 ; buffer menu
 
