@@ -3,3 +3,4 @@
 (evil-add-hjkl-bindings magit-commit-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-log-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-diff-mode-map 'emacs)
+(evil-add-hjkl-bindings magit-rebase-mode-map 'emacs)
