@@ -1,5 +1,6 @@
 ; sensible line wrapping
 (global-visual-line-mode 1)
+
 ; don't compile scss files
 (setq scss-compile-at-save nil)
 
@@ -31,7 +32,7 @@
 (blink-cursor-mode 0)
 
 ; font size
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 105)
 
 ; config
 (setq scroll-step 1)
