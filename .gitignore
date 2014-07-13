@@ -7,5 +7,5 @@ vendor/
 bookmarks
 menu_log.notes
 .emacs.desktop
-projectile-bookmarks.eld
+projectile-bookmarks.d
 projectile.cache
