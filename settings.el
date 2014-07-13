@@ -1,3 +1,5 @@
+; sensible line wrapping
+(global-visual-line-mode 1)
 ; don't compile scss files
 (setq scss-compile-at-save nil)
 
