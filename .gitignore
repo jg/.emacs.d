@@ -7,10 +7,7 @@ vendor/
 bookmarks
 menu_log.notes
 .emacs.desktop
-<<<<<<< HEAD
 projectile-bookmarks.d
 projectile.cache
-=======
 projectile*
 /flycheck_init.el
->>>>>>> 17bfc0e... Update gitignore
