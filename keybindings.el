@@ -26,13 +26,20 @@
 ; default 'k' binding already taken by hjkl keys
 (define-key magit-status-mode-map (kbd "d") 'magit-discard-item)
 
+; add jk movement keys to magit rebase mode
+(eval-after-load "rebase-mode"
+    '(progn
+       (define-key rebase-mode-map (kbd "j") 'forward-line)
+       (define-key rebase-mode-map (kbd "k") '(lambda(n)
+                                                (interactive "p")
+                                                (forward-line (* n -1))))))
+
 ; add hjkl bindings
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-status-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-commit-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-log-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-diff-mode-map 'emacs)
-(evil-add-hjkl-bindings git-rebase-mode-map 'emacs)
 
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'magit-status)
 
