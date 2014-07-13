@@ -1,5 +1,8 @@
 (require 'org)
 
+; wrap lines in org-mode
+(setq org-startup-truncated nil)
+
 
 (setq org-log-done 'time)
 
