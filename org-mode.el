@@ -3,13 +3,20 @@
 ; wrap lines in org-mode
 (setq org-startup-truncated nil)
 
+(setq org-completion-use-ido t)
+
+; not needed when global-font-lock-mode is on
+(add-hook 'org-mode-hook 'turn-on-font-lock)
 
 (setq org-log-done 'time)
 
 ; code highlighting in blocks
-; (setq org-src-fontify-natively t)
+(setq org-src-fontify-natively t)
 
-; set indent
+; set indentation
+(setq org-startup-indented t)
+
+; set indentation
 (setq org-indent-indentation-per-level 2)
 
 ; clean outline view
@@ -54,3 +61,25 @@
         "* TODO %?")
    ("j" "Journal" entry (file+datetree "~/documents/notes/journal.org")
         "* %?\nEntered on %U\n  %i\n  %a")))
+
+
+(defun org-mode-reftex-setup ()
+  (load-library "reftex")
+  (and (buffer-file-name)
+       (file-exists-p (buffer-file-name))
+       (reftex-parse-all))
+  (define-key org-mode-map (kbd "C-c )") 'reftex-citation))
+(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+
+(setq reftex-bibliography-commands '("bibliography" "nobibliography" "addbibresource"))
+
+(setq org-latex-pdf-process (quote ("texi2dvi --pdf --clean --verbose
+--batch %f" "bibtex %b" "texi2dvi --pdf --clean --verbose --batch %f"
+"texi2dvi --pdf --clean --verbose --batch %f")))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(org-agenda-files (quote ("~/documents/notes/todo.org"))))
