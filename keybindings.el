@@ -20,6 +20,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
 
 ; magit-status
+; magit
+
+; status
+(define-key my-keys-minor-mode-map (kbd "C-c m") 'magit-status)
 ; add hjkl bindings
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-status-mode-map 'emacs)
