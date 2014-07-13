@@ -12,18 +12,19 @@
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-minor-mode-map)
 
-
 ; reload config
 (defun reload-config ()
   (interactive)
   (load-file "~/.emacs.d/init.el"))
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
 
-; magit-status
 ; magit
 
 ; status
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'magit-status)
+
+; default 'k' binding already taken by hjkl keys
+(define-key magit-status-mode-map (kbd "d") 'magit-discard-item)
 ; add hjkl bindings
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs)
 (evil-add-hjkl-bindings magit-status-mode-map 'emacs)
