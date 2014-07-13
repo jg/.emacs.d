@@ -56,7 +56,6 @@
 (load-conf "fiplr")
 (load-conf "bookmark+")
 (load-conf "magit")
-(load-conf "keybindings")
 (load-conf "projectile")
 (load-conf "ibuffer")
 
@@ -87,3 +86,5 @@
  ;; If there is more than one, they won't work right.
  )
 
+
+(load-conf "keybindings")
