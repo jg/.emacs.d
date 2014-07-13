@@ -29,6 +29,8 @@
 ; add jk movement keys to magit rebase mode
 (eval-after-load "rebase-mode"
     '(progn
+       (define-key rebase-mode-map (kbd "n") 'rebase-mode-move-line-down)
+       (define-key rebase-mode-map (kbd "p") 'rebase-mode-move-line-up)
        (define-key rebase-mode-map (kbd "j") 'forward-line)
        (define-key rebase-mode-map (kbd "k") '(lambda(n)
                                                 (interactive "p")
