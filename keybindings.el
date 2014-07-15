@@ -155,3 +155,8 @@
   "Kill all buffers except the current one"
   (interactive)
     (mapc 'kill-buffer (cdr (buffer-list (current-buffer)))))
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (clipboard-yank))
+
