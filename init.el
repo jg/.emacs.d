@@ -59,16 +59,6 @@
 (load-conf "projectile")
 (load-conf "ibuffer")
 
-(defun org-mode-reftex-setup ()
-  (load-library "reftex")
-  (and (buffer-file-name)
-       (file-exists-p (buffer-file-name))
-       (reftex-parse-all))
-  (define-key org-mode-map (kbd "C-c )") 'reftex-citation))
-(add-hook 'org-mode-hook 'org-mode-reftex-setup)
-
-(setq reftex-bibliography-commands '("bibliography" "nobibliography" "addbibresource"))
-
 (setq org-latex-pdf-process (quote ("texi2dvi --pdf --clean --verbose
 --batch %f" "bibtex %b" "texi2dvi --pdf --clean --verbose --batch %f"
 "texi2dvi --pdf --clean --verbose --batch %f")))
