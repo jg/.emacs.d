@@ -72,19 +72,5 @@
 (setq org-latex-pdf-process (quote ("texi2dvi --pdf --clean --verbose
 --batch %f" "bibtex %b" "texi2dvi --pdf --clean --verbose --batch %f"
 "texi2dvi --pdf --clean --verbose --batch %f")))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
- '(org-agenda-files (quote ("~/documents/notes/todo.org"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 
 (load-conf "keybindings")
