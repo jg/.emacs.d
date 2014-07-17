@@ -2,10 +2,6 @@
 
 (global-unset-key (kbd "C-\\"))
 
-; reset some evil bindings i don't like
-; (global-unset-key (kbd "("))
-; (global-unset-key (kbd ")"))
-
 (defvar my-keys-minor-mode-map (make-keymap) "my keys minor mode keymap")
 
 (define-minor-mode my-keys-minor-mode
