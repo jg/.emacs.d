@@ -18,7 +18,14 @@
   (load-file "~/.emacs.d/init.el"))
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
 
+; [textmate] goto symbol
+(define-key my-keys-minor-mode-map (kbd "C-c p") 'textmate-goto-symbol)
+
+; [textmate] goto file
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'textmate-goto-file)
+
 ; magit
+(define-key my-keys-minor-mode-map (kbd "C-c m") 'magit-status)
 
 ; status
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'magit-status)

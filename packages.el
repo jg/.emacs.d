@@ -67,6 +67,7 @@
                                'gitconfig-mode
                                'haml-mode
                                'haskell-mode
+                               'textmate
 
                                ; other
                                'tree-mode

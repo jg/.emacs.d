@@ -19,11 +19,7 @@
 ; language modes
 (load-conf "typescript-mode")
 (load-conf "haskell-mode")
-(load-conf "ruby-mode")
 (load-conf "javascript-mode")
-(load-conf "rspec-mode")
-(load-conf "ruby-end")
-(load-conf "inf-ruby")
 (load-conf "markdown-mode")
 (load-conf "scala-mode2")
 (load-conf "sh-mode")
@@ -31,6 +27,13 @@
 (load-conf "c-mode")
 (load-conf "r-mode")
 (load-conf "auctex")
+
+; ruby modes
+(load-conf "rspec-mode")
+(load-conf "ruby-mode")
+(load-conf "ruby-end")
+(load-conf "inf-ruby")
+(load-conf "textmate-mode")
 
 ; editing
 (load-conf "move-text")
