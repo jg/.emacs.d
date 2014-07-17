@@ -22,6 +22,16 @@
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode 1)
 
+(global-set-key
+ "\M-x"
+ (lambda ()
+   (interactive)
+   (call-interactively
+    (intern
+     (ido-completing-read
+      "M-x "
+      (all-completions "" obarray 'commandp))))))
+
 (defun ido-find-file-in-tag-files ()
   (interactive)
   (save-excursion
