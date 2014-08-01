@@ -9,6 +9,17 @@
 (package-initialize)
 
 (setq required-packages (list
+                               'evil
+                               'scala-mode2
+                               'ruby-end
+                               'inf-ruby
+                               'textmate
+                               'ido-ubiquitous
+                               'ido-vertical-mode
+                               'auto-indent-mode
+                               'find-file-in-project
+                               'dirtree
+
                                'flycheck
                                'ag
                                'git-blame
@@ -17,8 +28,7 @@
                                'maxframe
                                'dired-details
                                'edit-server
-                               'melpa
-                               
+
                                ; editing
                                'move-text
                                'ace-jump-mode

@@ -12,7 +12,7 @@
 (load-conf "packages")
 
 ; dependencies
-(load-conf "windata") ; for dirtree
+; (load-conf "windata") ; for dirtree
 
 (load-conf "evil")
 
@@ -33,7 +33,6 @@
 (load-conf "ruby-mode")
 (load-conf "ruby-end")
 (load-conf "inf-ruby")
-(load-conf "textmate-mode")
 
 ; editing
 (load-conf "move-text")
