@@ -19,7 +19,6 @@
 	; (highlight-lines-matching-regexp ".\\{81\\}" 'hi-green)
 	))
 
-(setq ruby-deep-indent-paren nil)
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
         indent offset)
