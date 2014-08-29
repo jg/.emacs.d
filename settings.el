@@ -1,3 +1,6 @@
+; scratch message not needed
+(setq initial-scratch-message nil)
+
 ; sensible line wrapping
 (global-visual-line-mode 1)
 
