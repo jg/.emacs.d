@@ -71,8 +71,11 @@
 (define-key my-keys-minor-mode-map (kbd "C-k") 'kill-whole-line)
 (define-key my-keys-minor-mode-map (kbd "C-\\") 'comment-or-uncomment-region)
 
+; projectile
+(define-key my-keys-minor-mode-map (kbd "C-c r") 'projectile-find-file)
+
 ; extensions
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'fiplr-find-file)
+; (define-key my-keys-minor-mode-map (kbd "C-c f") 'fiplr-find-file)
 (define-key my-keys-minor-mode-map (kbd "C-p") 'fiplr-find-file)
 
 (define-key my-keys-minor-mode-map (kbd "C-l") 'deft)
