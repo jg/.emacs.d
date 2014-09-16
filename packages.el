@@ -49,6 +49,7 @@
                                'org-plus-contrib
                                'deft
                                'gist
+                               'git-timemachine
 
                                ; language tools
                                'flymake-css
