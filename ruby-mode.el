@@ -1,4 +1,5 @@
 (require 'ruby-mode)
+(setq ruby-use-smie nil)
 (add-to-list 'auto-mode-alist '("\\.rjs$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
