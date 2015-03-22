@@ -62,6 +62,9 @@
 (load-conf "projectile")
 (load-conf "ibuffer")
 
+; custom commands
+(load-conf "insert-link-with-html-title")
+
 (setq org-latex-pdf-process (quote ("texi2dvi --pdf --clean --verbose
 --batch %f" "bibtex %b" "texi2dvi --pdf --clean --verbose --batch %f"
 "texi2dvi --pdf --clean --verbose --batch %f")))
