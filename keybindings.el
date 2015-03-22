@@ -90,7 +90,7 @@
 
 ; org-mode
 
-(define-key my-keys-minor-mode-map (kbd "C-c a t") 'org-todo-list)
+; (define-key my-keys-minor-mode-map (kbd "C-c a t") 'org-todo-list)
 
 (define-key my-keys-minor-mode-map (kbd "C-c a")   'org-agenda)
 
@@ -104,6 +104,10 @@
 ; buffer mgmt
 
 (define-key my-keys-minor-mode-map (kbd "C-x l") 'only-current-buffer)
+
+
+
+(define-key my-keys-minor-mode-map (kbd "C-c i") 'insert-link-with-html-title)
 
 
 ; definitions
