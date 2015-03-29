@@ -50,6 +50,12 @@
 
 ; buffer menu
 
+; evil move by visual line
+(define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+
 ; (define-key my-keys-minor-mode-map (kbd "C-x C-b") 'buffer-menu)
 (define-key my-keys-minor-mode-map (kbd "C-x C-b") 'ibuffer)
 
