@@ -27,6 +27,7 @@
 (load-conf "c-mode")
 (load-conf "r-mode")
 (load-conf "auctex")
+(load-conf "ess")
 
 ; ruby modes
 (load-conf "rspec-mode")
@@ -61,6 +62,7 @@
 (load-conf "magit")
 (load-conf "projectile")
 (load-conf "ibuffer")
+(load-conf "fill-column-indicator")
 
 ; custom commands
 (load-conf "insert-link-with-html-title")

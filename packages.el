@@ -44,7 +44,6 @@
 
                                ; tools
                                'magit
-                               'nrepl
                                'org
                                'org-plus-contrib
                                'deft
