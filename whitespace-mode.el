@@ -1,3 +1,5 @@
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
-; (global-whitespace-mode t)
+(setq whitespace-line-column 80)
+(setq whitespace-global-modes '(ruby-mode))
+(global-whitespace-mode)
