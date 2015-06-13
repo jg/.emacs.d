@@ -2,4 +2,6 @@
 (setq fci-rule-color "darkblue")
 (setq fci-rule-column 78)
 (add-hook 'ruby-mode-hook 'fci-mode)
+(add-hook 'js-mode-hook 'fci-mode)
 (add-hook 'scala-mode-hook 'fci-mode)
+(add-hook 'haskell-mode-hook 'fci-mode)
