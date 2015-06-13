@@ -19,6 +19,7 @@
                                'auto-indent-mode
                                'find-file-in-project
                                'dirtree
+                               'exec-path-from-shell
 
                                'flycheck
                                'ag
