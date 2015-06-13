@@ -94,3 +94,5 @@
 
 ; disable auto save mode
 (setq auto-save-default nil)
+
+(setq lazy-highlight-cleanup nil)
