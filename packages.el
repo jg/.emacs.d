@@ -20,6 +20,7 @@
                                'find-file-in-project
                                'dirtree
                                'exec-path-from-shell
+                               'rbenv
 
                                'flycheck
                                'ag
