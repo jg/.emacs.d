@@ -50,6 +50,7 @@
                                'deft
                                'gist
                                'git-timemachine
+                               'gnuplot
 
                                ; language tools
                                'flymake-css
