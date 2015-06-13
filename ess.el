@@ -3,3 +3,4 @@
 :; cd ~/bin/ess && make
 (add-to-list 'load-path "/home/jg/bin/ess/lisp")
 (load "ess-site")
+(setq ess-ask-for-ess-directory nil)
