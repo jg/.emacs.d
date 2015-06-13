@@ -43,6 +43,7 @@
 (load-conf "dired")
 
 ; other
+(load-conf "org-babel")
 (load-conf "whitespace-mode")
 (load-conf "org-mode")
 (load-conf "git-blame")
