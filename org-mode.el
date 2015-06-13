@@ -1,5 +1,8 @@
 (require 'org)
 
+; display inline images by default
+(setq org-startup-with-inline-images t)
+
 ; wrap lines in org-mode
 (setq org-startup-truncated nil)
 
