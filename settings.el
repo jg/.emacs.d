@@ -1,3 +1,7 @@
+
+; render images by default
+(auto-image-file-mode)
+
 ; scratch message not needed
 (setq initial-scratch-message nil)
 
