@@ -63,6 +63,7 @@
 (load-conf "projectile")
 (load-conf "ibuffer")
 (load-conf "fill-column-indicator")
+(load-conf "exec-path-from-shell")
 
 ; custom commands
 (load-conf "insert-link-with-html-title")
