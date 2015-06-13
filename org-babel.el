@@ -5,6 +5,8 @@
    (sh . t)
    (python . t)
    (emacs-lisp . t)
+   (R . t)
+   (gnuplot . t)
    )
  )
 
