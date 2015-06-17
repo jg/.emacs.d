@@ -81,6 +81,7 @@
                                'haml-mode
                                'haskell-mode
                                'textmate
+                               'tide
 
                                ; other
                                'tree-mode
