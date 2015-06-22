@@ -43,6 +43,7 @@
 (load-conf "dired")
 
 ; other
+(load-conf "ag")
 (load-conf "org-babel")
 (load-conf "whitespace-mode")
 (load-conf "org-mode")
