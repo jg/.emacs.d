@@ -1,3 +1,6 @@
+; inf-urby
+(global-set-key (kbd "C-c r r") 'inf-ruby)
+
 ; unset unused global keys
 
 (global-unset-key (kbd "C-\\"))
