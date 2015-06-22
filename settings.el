@@ -1,3 +1,6 @@
+; default font
+(set-face-attribute 'default nil :font "Droid Sans Mono")
+
 ; enable ctrl+v
 (cua-mode t)
     (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
