@@ -1,6 +1,9 @@
 ; replace yes or no with y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
 
 ; default font
 (set-face-attribute 'default nil :font "Droid Sans Mono")
