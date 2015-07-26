@@ -43,6 +43,7 @@
 (load-conf "dired")
 
 ; other
+(load-conf "ace-jump-mode")
 (load-conf "ag")
 (load-conf "org-babel")
 (load-conf "whitespace-mode")
