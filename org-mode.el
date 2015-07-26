@@ -1,5 +1,9 @@
 (require 'org)
 
+; follow links with RET
+(setq org-return-follows-link t)
+(setq org-startup-truncated t)
+
 ; display inline images by default
 (setq org-startup-with-inline-images t)
 
