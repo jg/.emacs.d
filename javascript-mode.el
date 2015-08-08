@@ -6,3 +6,5 @@
   (flycheck-mode)
 	; (highlight-lines-matching-regexp ".\\{81\\}" 'hi-green)
 	))
+
+(setq js-indent-level 2)
