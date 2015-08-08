@@ -81,7 +81,12 @@
 (define-key my-keys-minor-mode-map (kbd "C-\\") 'comment-or-uncomment-region)
 
 ; projectile
-(define-key my-keys-minor-mode-map (kbd "C-c r") 'projectile-find-file)
+(define-key my-keys-minor-mode-map (kbd "C-c f") 'projectile-find-file)
+(define-key my-keys-minor-mode-map (kbd "C-c s") 'projectile-find-test-file)
+
+; ag
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'ag-project)
+(define-key my-keys-minor-mode-map (kbd "C-c s") 'ag-project)
 
 ; extensions
 ; (define-key my-keys-minor-mode-map (kbd "C-c f") 'fiplr-find-file)
