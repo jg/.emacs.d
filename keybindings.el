@@ -57,7 +57,6 @@
 
 ; projectile
 (define-key my-keys-minor-mode-map (kbd "C-c f") 'projectile-find-file)
-(define-key my-keys-minor-mode-map (kbd "C-c s") 'projectile-find-test-file)
 
 ; ag
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'ag-project)
@@ -97,6 +96,14 @@
 
 
 (define-key my-keys-minor-mode-map (kbd "C-c i") 'insert-link-with-html-title)
+
+; exit insert mode & save
+(define-key my-keys-minor-mode-map (kbd "C-s ") (lambda ()
+                                                  (interactive)
+                                                  (save-buffer)
+                                                  (evil-normal-state)
+                                                  ))
+
 
 
 ; definitions
