@@ -45,7 +45,7 @@
 ; other
 (load-conf "ace-jump-mode")
 (load-conf "ag")
-(load-conf "org-babel")
+; (load-conf "org-babel")
 (load-conf "whitespace-mode")
 (load-conf "org-mode")
 (load-conf "git-blame")
