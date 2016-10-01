@@ -6,7 +6,7 @@
          kill-buffer-query-functions))
 
 ; default font
-(set-face-attribute 'default nil :font "Droid Sans Mono")
+; (set-face-attribute 'default nil :font "Droid Sans Mono")
 
 ; render images by default
 (auto-image-file-mode)

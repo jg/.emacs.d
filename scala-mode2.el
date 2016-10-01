@@ -1,4 +1,4 @@
-(require 'scala-mode2)
+(require 'scala-mode)
 
 ; align params on the next lines to the first one
 (setq scala-indent:align-parameters t)

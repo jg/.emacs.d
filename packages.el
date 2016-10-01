@@ -10,7 +10,7 @@
 
 (setq required-packages (list
                                'evil
-                               'scala-mode2
+                               'scala-mode
                                'ruby-end
                                'inf-ruby
                                'textmate
@@ -76,7 +76,6 @@
                                'yaml-mode
                                'markdown-mode
                                'clojure-mode
-                               'git-commit-mode
                                'gitconfig-mode
                                'haml-mode
                                'haskell-mode
