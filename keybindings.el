@@ -60,7 +60,7 @@
 
 ; ag
 (define-key my-keys-minor-mode-map (kbd "C-c g") 'ag-project)
-(define-key my-keys-minor-mode-map (kbd "C-c s") 'ag-project)
+(define-key my-keys-minor-mode-map (kbd "C-c s") 'ag-project-at-point)
 
 ; extensions
 ; (define-key my-keys-minor-mode-map (kbd "C-c f") 'fiplr-find-file)
@@ -74,7 +74,7 @@
 
 ; (define-key my-keys-minor-mode-map (kbd "C-y") 'speedbar)
 
-(define-key my-keys-minor-mode-map (kbd "C-c s") 'copy-file-name-to-clipboard)
+; (define-key my-keys-minor-mode-map (kbd "C-c s") 'copy-file-name-to-clipboard)
 
 ; org-mode
 

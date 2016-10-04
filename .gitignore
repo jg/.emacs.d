@@ -13,3 +13,5 @@ projectile*
 /flycheck_init.el
 /bookmarks
 ido.last
+abbrev_defs
+shell
