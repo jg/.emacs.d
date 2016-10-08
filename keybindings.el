@@ -103,6 +103,11 @@
                                                   (save-buffer)
                                                   (evil-normal-state)
                                                   ))
+(define-key my-keys-minor-mode-map (kbd "C-w ") (lambda ()
+                                                  (interactive)
+                                                  (save-buffer)
+                                                  (evil-normal-state)
+                                                  ))
 
 
 

@@ -29,9 +29,6 @@
 ; clean outline view
 (setq org-hide-leading-stars t)
 
-; display inline images by default
-(setq org-startup-with-inline-images t)
-
 ; sub/superscripts are nice
 (setq org-use-sub-supescripts t)
 
