@@ -82,7 +82,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-c a")   'org-agenda)
 
-(define-key my-keys-minor-mode-map (kbd "C-c c") 'org-capture)
+(define-key my-keys-minor-mode-map (kbd "C-c c") 'change-next-eclosed-text)
 
 (define-key my-keys-minor-mode-map (kbd "C-x p i") 'cliplink)
 
@@ -212,3 +212,40 @@
      `(lambda (s)
         (perform-cliplink ,dest-buffer ,url
                           (buffer-string))))))
+
+
+(defun my-mark-current-word (&optional arg allow-extend)
+  "Select the word under cursor"
+  (interactive "p\np")
+  (setq arg (if arg arg 1))
+  (if (and allow-extend
+           (or (and (eq last-command this-command) (mark t))
+               (region-active-p)))
+      (set-mark
+       (save-excursion
+         (when (< (mark) (point))
+           (setq arg (- arg)))
+         (goto-char (mark))
+         (forward-word arg)
+         (point)))
+    (let ((wbounds (bounds-of-thing-at-point 'word)))
+      (unless (consp wbounds)
+        (error "No word at point"))
+      (if (>= arg 0)
+          (goto-char (car wbounds))
+        (goto-char (cdr wbounds)))
+      (push-mark (save-excursion
+                   (forward-word arg)
+                   (point)))
+      (activate-mark))))
+
+(defun change-next-enclosed-text ()
+  "Searches for the next quoted text, deletes it and lets you input a replacement"
+  (interactive)
+  (let (p1 p2)
+    (progn
+    (skip-chars-forward "^\"')") (setq p1 (point))
+    (goto-char (1+ (point)))
+    (skip-chars-forward "^\"')") (setq p2 (point))
+    (delete-region (+ p1 1) p2)
+    (evil-insert 1))))
