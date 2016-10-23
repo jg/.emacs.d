@@ -28,6 +28,7 @@
 (load-conf "r-mode")
 (load-conf "auctex")
 (load-conf "ess")
+(load-conf "merlin")
 
 ; ruby modes
 (load-conf "rspec-mode")
