@@ -153,7 +153,7 @@
 
 
 (defun copy-file-name-to-clipboard ()
-  "Put the current file name on the clipboard"
+  "Puts the current file name on the clipboard"
   (interactive)
   (let ((filename (if (equal major-mode 'dired-mode)
                       default-directory
@@ -249,3 +249,50 @@
     (skip-chars-forward "^\"')") (setq p2 (point))
     (delete-region (+ p1 1) p2)
     (evil-insert 1))))
+
+
+(defun org-insert-website ()
+  "Downloads website using url in clipboard to a directory with same name as buffer."
+  (interactive)
+  (let* (
+         ; path to the directory of the current buffer. That directory has the same
+         ; name as current buffer and the same parent directory
+         (dir-path (file-name-as-directory (file-name-sans-extension (buffer-file-name))))
+         ; url we got from the user
+         (url (x-get-clipboard))
+         ; parsed url
+         (parsed-url (url-generic-parse-url url))
+         ; command for archiving the website
+         (cmd (concat "wget -pk -P " dir-path " " url))
+         ; host part of the url
+         (host (url-host parsed-url))
+         ; path part of the url
+         (url-path (first-present (list (url-filename parsed-url) "index.html")))
+         ; path to the locally downloaded copy
+         (local-path (concat dir-path host url-path))
+        ; link formatted in org syntax pointing to the localy downloaded copy
+        (local-link (concat "[[" local-path "]["))
+        )
+    ; make directory if it isn't present
+    (if (file-exists-p dir-path) () (make-directory dir-path))
+    ; invoke wget to download the website
+    (shell-command-to-string cmd)
+    ; insert org link to the local website in the current buffer
+    (insert local-link)
+  )
+)
+
+(defun detect (predicate-fn lst)
+  "Returns first element from lst that matches the predicate"
+  (when lst
+    (if (funcall predicate-fn (car lst))
+        (car lst)
+        (detect predicate-fn (cdr lst)))))
+
+(defun s-present? (s)
+  "True when string is present"
+  (not (s-blank? s)))
+
+(defun first-present (lst)
+  "Returns first string that is present in list"
+  (detect 's-present? lst))
