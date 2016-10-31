@@ -9,6 +9,7 @@
 (package-initialize)
 
 (setq required-packages (list
+                         'sml-mode
                          'isend-mode
                          'tss
                          'tuareg
