@@ -27,8 +27,7 @@
 
                          'flycheck
                          'ag
-                         'git-blame
-
+     
                                         ; generic
                          'maxframe
                          'dired-details
