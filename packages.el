@@ -28,7 +28,6 @@
 
                          'flycheck
                          'ag
-                         'git-blame
 
                                         ; generic
                          'maxframe
