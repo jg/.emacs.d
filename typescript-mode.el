@@ -1,6 +1,6 @@
 ; (load-file "~/.emacs.d/vendor/TypeScript.el")
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
+(setq typescript-indent-level 2)
 ; (require 'typescript)
 ; (add-hook 'typescript-mode-hook '(lambda ()
   ; (local-set-key (kbd "RET") '(lambda ()

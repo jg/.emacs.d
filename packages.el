@@ -84,6 +84,7 @@
                          'haskell-mode
                          'textmate
                          'tide
+                         'jsx-mode
 
                                         ; other
                          'tree-mode

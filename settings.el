@@ -1,3 +1,8 @@
+; server
+(server-start)
+; shift width
+(setq evil-shift-width 2)
+
 ; replace yes or no with y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)

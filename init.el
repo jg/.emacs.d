@@ -18,6 +18,7 @@
 
 ; language modes
 (load-conf "typescript-mode")
+(load-conf "jsx-mode")
 (load-conf "haskell-mode")
 (load-conf "javascript-mode")
 (load-conf "markdown-mode")
