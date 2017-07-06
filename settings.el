@@ -1,3 +1,6 @@
+; don't show warnings
+(setq warning-minimum-level :emergency)
+
 ; replace yes or no with y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
