@@ -1,3 +1,27 @@
+(add-hook 'org-mode-hook 
+          (lambda ()
+            (local-set-key (kbd "<tab>") 'outline-toggle-children)
+            (local-set-key (kbd "<S-tab>") 'org-cycle)
+            (local-set-key (kbd "C-8") 'org-cycle)
+            (local-set-key (kbd "C-*") 'org-cycle)
+            (local-set-key (kbd "C-<enter>") 'org-insert-heading-after-current)
+            )
+          )
+
+(define-key evil-normal-state-map (kbd "C-:") 'load-current-file)
+
+(define-key evil-normal-state-map (kbd "C-'") 'inferior-haskell-load-file)
+
+; 
+(define-key evil-normal-state-map (kbd "C-;") 'ido-describe-bindings)
+
+; imenu
+(define-key evil-normal-state-map (kbd "C-i") 'imenu)
+
+; project explorer
+(define-key evil-normal-state-map (kbd "C-o") 'project-explorer-toggle)
+(define-key evil-normal-state-map (kbd "C-e") 'project-explorer-close)
+
 ; inf-urby
 (global-set-key (kbd "C-c r r") 'inf-ruby)
 
@@ -72,7 +96,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-v") 'paste-from-clipboard)
 
-; (define-key my-keys-minor-mode-map (kbd "C-y") 'speedbar)
+(define-key my-keys-minor-mode-map (kbd "C-,") 'speedbar)
 
 ; (define-key my-keys-minor-mode-map (kbd "C-c s") 'copy-file-name-to-clipboard)
 
@@ -296,3 +320,8 @@
 (defun first-present (lst)
   "Returns first string that is present in list"
   (detect 's-present? lst))
+
+(defun load-current-file ()
+  "Loads file in current buffer via load-file"
+  (interactive)
+  (load-file (buffer-file-name)))
