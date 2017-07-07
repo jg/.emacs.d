@@ -8,6 +8,9 @@
 ; shift width
 (setq evil-shift-width 2)
 
+; don't show warnings
+(setq warning-minimum-level :emergency)
+
 ; replace yes or no with y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
@@ -58,7 +61,11 @@
 (blink-cursor-mode 0)
 
 ; font size
+<<<<<<< HEAD
 (set-face-attribute 'default nil :height 170)
+=======
+(set-face-attribute 'default nil :height 140)
+>>>>>>> 19ac44aeeea1655fd39a9cc4affd4c7ce532d236
 
 ; config
 (setq scroll-step 1)

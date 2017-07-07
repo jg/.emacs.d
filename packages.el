@@ -32,7 +32,6 @@
 
                          'flycheck
                          'ag
-
                                         ; generic
                          'maxframe
                          'dired-details
