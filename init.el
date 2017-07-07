@@ -17,6 +17,7 @@
 (load-conf "evil")
 
 ; language modes
+(load-conf "purescript-mode")
 (load-conf "typescript-mode")
 (load-conf "jsx-mode")
 (load-conf "haskell-mode")
