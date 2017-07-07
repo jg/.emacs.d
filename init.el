@@ -49,7 +49,7 @@
 (load-conf "ace-jump-mode")
 (load-conf "ag")
 ; (load-conf "org-babel")
-(load-conf "whitespace-mode")
+; (load-conf "whitespace-mode")
 (load-conf "org-mode")
 (load-conf "git-blame")
 (load-conf "yasnippet")
@@ -79,3 +79,42 @@
 
 (load-conf "keybindings")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(org-agenda-files (quote ("~/documents/notes/todo.org")))
+ '(safe-local-variable-values
+   (quote
+    ((eval progn
+           (let
+               ((plzoo-root-directory
+                 (when buffer-file-name
+                   (locate-dominating-file buffer-file-name ".dir-locals.el")))
+                (plzoo-project-find-file
+                 (and
+                  (boundp
+                   (quote plzoo-project-find-file))
+                  plzoo-project-find-file)))
+             (when plzoo-root-directory
+               (setq tags-file-name
+                     (concat plzoo-root-directory "TAGS"))
+               (add-to-list
+                (quote compilation-search-path)
+                plzoo-root-directory)
+               (if
+                   (not plzoo-project-find-file)
+                   (setq compile-command
+                         (concat "make -C " plzoo-root-directory))))
+             (setq plzoo-executable
+                   (concat plzoo-root-directory "all"))))
+     (haskell-process-use-ghci . t)
+     (haskell-indent-spaces . 4)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
