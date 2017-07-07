@@ -1,5 +1,6 @@
 (require 'package)
 (setq package-archives '())
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
@@ -9,7 +10,10 @@
 (package-initialize)
 
 (setq required-packages (list
+                         'free-keys
+                         'w3m
                          'sml-mode
+                         'elm-mode
                          'isend-mode
                          'tss
                          'tuareg
@@ -85,6 +89,7 @@
                          'textmate
                          'tide
                          'jsx-mode
+                         'hamlet-mode
 
                                         ; other
                          'tree-mode
