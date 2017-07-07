@@ -1,5 +1,10 @@
+; supress some stupid undo warning
+; (add-to-list 'warning-suppress-types '(undo discard-info))
+
+(setq css-indent-offset 2)
+
 ; server
-(server-start)
+; (server-start)
 ; shift width
 (setq evil-shift-width 2)
 
@@ -53,7 +58,7 @@
 (blink-cursor-mode 0)
 
 ; font size
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 170)
 
 ; config
 (setq scroll-step 1)
@@ -114,3 +119,4 @@
 (setq auto-save-default nil)
 
 (setq lazy-highlight-cleanup nil)
+
