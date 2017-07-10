@@ -1,5 +1,10 @@
 (require 'org)
 
+(add-hook 'org-agenda-mode-hook
+          (lambda ()
+            (define-key org-agenda-mode-map (kbd "j") 'org-agenda-next-item)
+            (define-key org-agenda-mode-map (kbd "k") 'org-agenda-previous-item)))
+
 ; follow links with RET
 (setq org-return-follows-link t)
 (setq org-startup-truncated t)
