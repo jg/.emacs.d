@@ -1,9 +1,19 @@
-(add-hook 'org-mode-hook 
+(define-key org-mode-map (kbd "<backtab>") 'collapse-current-entry)
+(defun collapse-current-entry ()
+  (interactive)
+  (if (outline-on-heading-p)
+      (progn
+        (outline-up-heading 1)
+        (hide-subtree))
+    (hide-entry))
+  )
+(define-key org-mode-map (kbd "<S-tab>") nil)
+(define-key org-mode-map (kbd "<S-iso-lefttab>") nil)
+(add-hook 'org-mode-hook
           (lambda ()
             (local-set-key (kbd "<tab>") 'outline-toggle-children)
-            (local-set-key (kbd "<S-tab>") 'org-cycle)
             (local-set-key (kbd "C-8") 'org-cycle)
-            (local-set-key (kbd "C-*") 'org-cycle)
+            (local-set-key (kbd "C-*") 'org-shifttab)
             (local-set-key (kbd "C-<enter>") 'org-insert-heading-after-current)
             )
           )
