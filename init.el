@@ -39,6 +39,7 @@
 (load-conf "inf-ruby")
 
 ; editing
+(load-conf "workgroups")
 (load-conf "move-text")
 ; (load-conf "smart-parens")
 

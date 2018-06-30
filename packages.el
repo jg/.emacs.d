@@ -49,6 +49,7 @@
                          'highlight-indentation
                          'git-gutter-fringe
                          'smartparens
+                         'folding
 
                                         ; tools
                          'magit
@@ -89,6 +90,7 @@
                          'tide
                          'jsx-mode
                          'hamlet-mode
+                         'psci
 
                                         ; other
                          'tree-mode

@@ -1,5 +1,5 @@
 ; supress some stupid undo warning
-; (add-to-list 'warning-suppress-types '(undo discard-info))
+(setq warning-minimum-level :emergency)
 
 (setq css-indent-offset 2)
 
