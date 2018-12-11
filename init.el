@@ -5,7 +5,6 @@
       (progn
 	(load-file (expand-file-name (concat "~/.emacs.d/" filename ".el")))
 	(add-to-list '*loaded-files* filename))))
-
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 (load-conf "settings")
@@ -17,6 +16,7 @@
 (load-conf "evil")
 
 ; language modes
+(load-conf "web-mode")
 (load-conf "purescript-mode")
 (load-conf "typescript-mode")
 (load-conf "jsx-mode")

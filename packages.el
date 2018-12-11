@@ -1,15 +1,25 @@
 (require 'package)
-(setq package-archives '())
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
-; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+(when (not package-archive-contents) (package-refresh-contents))
+
+; (setq package-archives '())
+
+; melpa http://melpa.org/#/getting-started
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+; (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+; (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
+; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+; (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+; (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/"))
 
 (setq required-packages (list
+                         'web-mode
                          'free-keys
                          'w3m
                          'sml-mode
@@ -88,7 +98,6 @@
                          'haskell-mode
                          'textmate
                          'tide
-                         'jsx-mode
                          'hamlet-mode
                          'psci
 
@@ -100,5 +109,4 @@
 
 (dolist (package required-packages)
   (when (not (package-installed-p package))
-    (package-refresh-contents)
     (package-install package)))

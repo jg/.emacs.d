@@ -1,3 +1,11 @@
+; web-mode indent level
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+
+; org: preserve indentation in code blocks
+(setq org-src-preserve-indentation t)
+
 ; supress some stupid undo warning
 (setq warning-minimum-level :emergency)
 
