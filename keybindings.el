@@ -1,12 +1,11 @@
+
+; elscreen
+(global-set-key (kbd "C-c c") 'elscreen-create)
+(global-set-key (kbd "C-c n") 'elscreen-next)
+(global-set-key (kbd "C-c p") 'elscreen-previous)
+
+; ord-mode
 (define-key org-mode-map (kbd "<backtab>") 'collapse-current-entry)
-(defun collapse-current-entry ()
-  (interactive)
-  (if (outline-on-heading-p)
-      (progn
-        (outline-up-heading 1)
-        (hide-subtree))
-    (hide-entry))
-  )
 (define-key org-mode-map (kbd "<S-tab>") nil)
 (define-key org-mode-map (kbd "<S-iso-lefttab>") nil)
 (add-hook 'org-mode-hook
@@ -30,7 +29,7 @@
 
 ; project explorer
 (define-key evil-normal-state-map (kbd "C-o") 'project-explorer-toggle)
-(define-key evil-normal-state-map (kbd "C-e") 'project-explorer-close)
+; (define-key evil-normal-state-map (kbd "C-e") 'project-explorer-close)
 
 ; inf-urby
 (global-set-key (kbd "C-c r r") 'inf-ruby)
@@ -46,9 +45,6 @@
   t " my-keys" 'my-keys-minor-mode-map)
 
 ; reload config
-(defun reload-config ()
-  (interactive)
-  (load-file "~/.emacs.d/init.el"))
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
 
 ; [textmate] goto symbol
@@ -116,7 +112,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-c a")   'org-agenda)
 
-(define-key my-keys-minor-mode-map (kbd "C-c c") 'change-next-eclosed-text)
+; (define-key my-keys-minor-mode-map (kbd "C-c c") 'change-next-eclosed-text)
 
 (define-key my-keys-minor-mode-map (kbd "C-x p i") 'cliplink)
 
@@ -335,3 +331,16 @@
   "Loads file in current buffer via load-file"
   (interactive)
   (load-file (buffer-file-name)))
+
+(defun collapse-current-entry ()
+  (interactive)
+  (if (outline-on-heading-p)
+      (progn
+        (outline-up-heading 1)
+        (hide-subtree))
+    (hide-entry))
+  )
+
+(defun reload-config ()
+  (interactive)
+  (load-file "~/.emacs.d/init.el"))

@@ -19,6 +19,7 @@
 ; (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/"))
 
 (setq required-packages (list
+                         'elscreen
                          'web-mode
                          'free-keys
                          'w3m

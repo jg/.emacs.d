@@ -47,6 +47,7 @@
 (load-conf "dired")
 
 ; other
+(load-conf "elscreen")
 (load-conf "ace-jump-mode")
 (load-conf "ag")
 ; (load-conf "org-babel")
