@@ -1,8 +1,11 @@
 
 ; elscreen
+;(global-unset-key (kbd "C-j"))
+(define-key evil-normal-state-map (kbd "C-.") nil)
+(global-set-key (kbd "C-j") nil)
 (global-set-key (kbd "C-c c") 'elscreen-create)
-(global-set-key (kbd "C-c n") 'elscreen-next)
-(global-set-key (kbd "C-c p") 'elscreen-previous)
+(global-set-key (kbd "C-,") 'elscreen-next)
+(global-set-key (kbd "C-.") 'elscreen-previous)
 
 ; ord-mode
 (define-key org-mode-map (kbd "<backtab>") 'collapse-current-entry)
@@ -46,12 +49,6 @@
 
 ; reload config
 (define-key my-keys-minor-mode-map (kbd "C-c k") 'reload-config)
-
-; [textmate] goto symbol
-(define-key my-keys-minor-mode-map (kbd "C-c p") 'textmate-goto-symbol)
-
-; [textmate] goto file
-(define-key my-keys-minor-mode-map (kbd "C-c f") 'textmate-goto-file)
 
 ; magit
 (define-key my-keys-minor-mode-map (kbd "C-c m") 'magit-status)
@@ -102,7 +99,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-v") 'paste-from-clipboard)
 
-(define-key my-keys-minor-mode-map (kbd "C-,") 'speedbar)
+; (define-key my-keys-minor-mode-map (kbd "C-,") 'speedbar)
 
 ; (define-key my-keys-minor-mode-map (kbd "C-c s") 'copy-file-name-to-clipboard)
 
