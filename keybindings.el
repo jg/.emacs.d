@@ -4,8 +4,8 @@
 (define-key evil-normal-state-map (kbd "C-.") nil)
 (global-set-key (kbd "C-j") nil)
 (global-set-key (kbd "C-c c") 'elscreen-create)
-(global-set-key (kbd "C-,") 'elscreen-next)
-(global-set-key (kbd "C-.") 'elscreen-previous)
+(global-set-key (kbd "C-.") 'elscreen-next)
+(global-set-key (kbd "C-,") 'elscreen-previous)
 
 ; ord-mode
 (define-key org-mode-map (kbd "<backtab>") 'collapse-current-entry)
