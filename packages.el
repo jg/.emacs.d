@@ -1,5 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -19,6 +21,8 @@
 ; (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/"))
 
 (setq required-packages (list
+                         'elixir-mode
+                         'avy
                          'elscreen
                          'web-mode
                          'free-keys

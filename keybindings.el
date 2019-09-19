@@ -1,9 +1,15 @@
 
+; avy
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(define-key evil-normal-state-map (kbd "C-:") 'avy-goto-char)
+
 ; elscreen
 ;(global-unset-key (kbd "C-j"))
 (define-key evil-normal-state-map (kbd "C-.") nil)
 (global-set-key (kbd "C-j") nil)
 (global-set-key (kbd "C-c c") 'elscreen-create)
+(global-set-key (kbd "C-c d") 'elscreen-kill)
+(global-set-key (kbd "C-c 0") 'elscreen-kill-others)
 (global-set-key (kbd "C-.") 'elscreen-next)
 (global-set-key (kbd "C-,") 'elscreen-previous)
 
@@ -20,9 +26,9 @@
             )
           )
 
-(define-key evil-normal-state-map (kbd "C-:") 'load-current-file)
+; (define-key evil-normal-state-map (kbd "C-'") 'load-current-file)
 
-(define-key evil-normal-state-map (kbd "C-'") 'inferior-haskell-load-file)
+;(define-key evil-normal-state-map (kbd "C-'") 'inferior-haskell-load-file)
 
 ; 
 (define-key evil-normal-state-map (kbd "C-;") 'ido-describe-bindings)

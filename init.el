@@ -16,6 +16,8 @@
 (load-conf "evil")
 
 ; language modes
+(load-conf "dockerfile-mode")
+(load-conf "elixir-mode")
 (load-conf "web-mode")
 (load-conf "purescript-mode")
 (load-conf "typescript-mode")
